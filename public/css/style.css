@@ -107,7 +107,11 @@ body{
 	font-size: 1em;
 	word-spacing: 3px;
 }
-div.solid {border-style: solid;}
+
+div.solid {
+    border-style: solid;
+    margin-top: 20px;
+}
 
 /*Footer*/
 .footer {
