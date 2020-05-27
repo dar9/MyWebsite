@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<title>Java Script</title>
+<link rel = "stylesheet" type = "text/css" href = "style.css" />
+</head>
+
+<body>
+<h1>JavaScript is Fun!</h1>
+
+<ul>
+  <li><a href="index.html">Main Page</a></li>
+  <li><a href="AboutMe.html">About Me</a></li>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Projects</a> <!--javascript:void(0)-->
+    <div class="dropdown-content">
+      <a href="Java.html">Java</a>
+      <a href="#">Unity</a>
+      <a href="#">Python</a>
+      <a class= "active" href="JavaS.html">JavaScript</a>
+    </div>
+  	</li>
+  <li><a href="Resume.html">Resume</a></li>
+</ul>
+
+<!--This is where the body starts-->
+<p id="hello">Hello These are the projects I have done in JavaScript</p>
+<!--<p>This is where the picture will go this is just a test to see how far it goes before it has to change to the next line</p>-->
+<div class= "row">
+<div class="column left"
+<p><img src="my_pic.jpg" alt="my picture" style="width:200px"></p>
+</div>
+
+<div class="column middle">
+
+<div class = "solid">
+<p> This is a game I created using JavaScript enjoy! </p>
+<p>The way you play is my pressing one of the 5 buttons which correspond to one of the 5 letters. Once you press the button the letter will change to the other letter from G to B or B to G. Not only does that one change but also the letters that are next to them.</p>
+<p>The way you win is by changing all of the letter to have B. you can also lose by changeing all the letters to G.</p>
+</div>
+<p id="demo">G,B,G,B,G</p>
+
+<button onclick="myFun1()">1</button>
+<button onclick="myFun2()">2</button>
+<button onclick="myFun3()">3</button>
+<button onclick="myFun4()">4</button>
+<button onclick="myFun5()">5</button>
+
+<script>
+ var arr = ["G","B","G","B","G"];
+
+function myFun1() {
+  if(arr[0]=="G"&&arr[1]=="B"){
+   arr[0]="B";
+   arr[1]="G";
+  }
+  else if(arr[0]=="B"&&arr[1]=="G"){
+   arr[0]="G";
+   arr[1]="B";
+  }
+  else if(arr[0]=="G"&&arr[1]=="G"){
+   arr[0]="B";
+   arr[1]="B";
+  }
+  else if(arr[0]=="B"&&arr[1]=="B"){
+   arr[0]="G";
+   arr[1]="G";
+  }
+    document.getElementById("demo").innerHTML = arr.toString();
+
+    if(arr[0]=="B"&&arr[1]=="B"&&arr[2]=="B"&&arr[3]=="B"&&arr[4]=="B"){
+     document.getElementById("win").innerHTML ="You won";
+    }
+    else if(arr[0]=="G"&&arr[1]=="G"&&arr[2]=="G"&&arr[3]=="G"&&arr[4]=="G"){
+    document.getElementById("lost").innerHTML ="You lost";
+    }
+}
+function myFun2() {
+    if(arr[0]=="G"&&arr[1]=="B"&&arr[2]=="G"){
+      arr[0]="B";
+      arr[1]="G";
+      arr[2]="B";
+  }
+  else if(arr[0]=="B"&&arr[1]=="G"&&arr[2]=="B"){
+      arr[0]="G";
+      arr[1]="B";
+      arr[2]="G";
+}
+  else if(arr[0]=="G"&&arr[1]=="B"&&arr[2]=="B"){
+      arr[0]="B";
+      arr[1]="G";
+      arr[2]="G";
+}
+  else if(arr[0]=="G"&&arr[1]=="G"&&arr[2]=="G"){
+      arr[0]="B";
+      arr[1]="B";
+      arr[2]="B";
+}
+  else if(arr[0]=="G"&&arr[1]=="G"&&arr[2]=="B"){
+      arr[0]="B";
+      arr[1]="B";
+      arr[2]="G";
+}
+  else if(arr[0]=="B"&&arr[1]=="G"&&arr[2]=="G"){
+      arr[0]="G";
+      arr[1]="B";
+      arr[2]="B";
+}
+  else if(arr[0]=="B"&&arr[1]=="B"&&arr[2]=="B"){
+      arr[0]="G";
+      arr[1]="G";
+      arr[2]="G";
+}
+  else if(arr[0]=="B"&&arr[1]=="B"&&arr[2]=="G"){
+      arr[0]="G";
+      arr[1]="G";
+      arr[2]="B";
+}
+    document.getElementById("demo").innerHTML = arr.toString();
+
+        if(arr[0]=="B"&&arr[1]=="B"&&arr[2]=="B"&&arr[3]=="B"&&arr[4]=="B"){
+     document.getElementById("win").innerHTML ="You won";
+    }
+    else if(arr[0]=="G"&&arr[1]=="G"&&arr[2]=="G"&&arr[3]=="G"&&arr[4]=="G"){
+    document.getElementById("lost").innerHTML ="You lost";
+    }
+}
+function myFun3() {
+     if(arr[1]=="G"&&arr[2]=="B"&&arr[3]=="G"){
+      arr[1]="B";
+      arr[2]="G";
+      arr[3]="B";
+  }
+  else if(arr[1]=="B"&&arr[2]=="G"&&arr[3]=="B"){
+      arr[1]="G";
+      arr[2]="B";
+      arr[3]="G";
+}
+  else if(arr[1]=="G"&&arr[2]=="B"&&arr[3]=="B"){
+      arr[1]="B";
+      arr[2]="G";
+      arr[3]="G";
+}
+  else if(arr[1]=="G"&&arr[2]=="G"&&arr[3]=="G"){
+      arr[1]="B";
+      arr[2]="B";
+      arr[3]="B";
+}
+  else if(arr[1]=="G"&&arr[2]=="G"&&arr[3]=="B"){
+      arr[1]="B";
+      arr[2]="B";
+      arr[3]="G";
+}
+  else if(arr[1]=="B"&&arr[2]=="G"&&arr[3]=="G"){
+      arr[1]="G";
+      arr[2]="B";
+      arr[3]="B";
+}
+  else if(arr[1]=="B"&&arr[2]=="B"&&arr[3]=="B"){
+      arr[1]="G";
+      arr[2]="G";
+      arr[3]="G";
+}
+  else if(arr[1]=="B"&&arr[2]=="B"&&arr[3]=="G"){
+      arr[1]="G";
+      arr[2]="G";
+      arr[3]="B";
+}
+    document.getElementById("demo").innerHTML = arr.toString();
+
+        if(arr[0]=="B"&&arr[1]=="B"&&arr[2]=="B"&&arr[3]=="B"&&arr[4]=="B"){
+     document.getElementById("win").innerHTML ="You won";
+    }
+    else if(arr[0]=="G"&&arr[1]=="G"&&arr[2]=="G"&&arr[3]=="G"&&arr[4]=="G"){
+    document.getElementById("lost").innerHTML ="You lost";
+    }
+}
+function myFun4() {
+     if(arr[2]=="G"&&arr[3]=="B"&&arr[4]=="G"){
+      arr[2]="B";
+      arr[3]="G";
+      arr[4]="B";
+  }
+  else if(arr[2]=="B"&&arr[3]=="G"&&arr[4]=="B"){
+      arr[2]="G";
+      arr[3]="B";
+      arr[4]="G";
+}
+  else if(arr[2]=="G"&&arr[3]=="B"&&arr[4]=="B"){
+      arr[2]="B";
+      arr[3]="G";
+      arr[4]="G";
+}
+  else if(arr[2]=="G"&&arr[3]=="G"&&arr[4]=="G"){
+      arr[2]="B";
+      arr[3]="B";
+      arr[4]="B";
+}
+  else if(arr[2]=="G"&&arr[3]=="G"&&arr[4]=="B"){
+      arr[2]="B";
+      arr[3]="B";
+      arr[4]="G";
+}
+  else if(arr[2]=="B"&&arr[3]=="G"&&arr[4]=="G"){
+      arr[2]="G";
+      arr[3]="B";
+      arr[4]="B";
+}
+  else if(arr[2]=="B"&&arr[3]=="B"&&arr[4]=="B"){
+      arr[2]="G";
+      arr[3]="G";
+      arr[4]="G";
+}
+  else if(arr[2]=="B"&&arr[3]=="B"&&arr[4]=="G"){
+      arr[2]="G";
+      arr[3]="G";
+      arr[4]="B";
+}
+    document.getElementById("demo").innerHTML = arr.toString();
+
+        if(arr[0]=="B"&&arr[1]=="B"&&arr[2]=="B"&&arr[3]=="B"&&arr[4]=="B"){
+     document.getElementById("win").innerHTML ="You won";
+    }
+    else if(arr[0]=="G"&&arr[1]=="G"&&arr[2]=="G"&&arr[3]=="G"&&arr[4]=="G"){
+    document.getElementById("lost").innerHTML ="You lost";
+    }
+}
+function myFun5() {
+  if(arr[3]=="G"&&arr[4]=="B"){
+   arr[3]="B";
+   arr[4]="G";
+  }
+  else if(arr[3]=="B"&&arr[4]=="G"){
+   arr[3]="G";
+   arr[4]="B";
+  }
+  else if(arr[3]=="G"&&arr[4]=="G"){
+   arr[3]="B";
+   arr[4]="B";
+  }
+  else if(arr[3]=="B"&&arr[4]=="B"){
+   arr[3]="G";
+   arr[4]="G";
+  }
+    document.getElementById("demo").innerHTML = arr.toString();
+
+        if(arr[0]=="B"&&arr[1]=="B"&&arr[2]=="B"&&arr[3]=="B"&&arr[4]=="B"){
+     document.getElementById("win").innerHTML ="You won";
+    }
+    else if(arr[0]=="G"&&arr[1]=="G"&&arr[2]=="G"&&arr[3]=="G"&&arr[4]=="G"){
+    document.getElementById("lost").innerHTML ="You lost";
+    }
+}
+
+</script>
+<p id="win"></p>
+<p id="lost"></p>
+
+
+</div>
+
+<div class="column right">
+
+</div>
+
+</div>
+<div class="footer">
+  <p>Phone: (915)240-5066 / Email: diegoreynoso100@gmail.com / GitHub: https://github.com/dar9</p>
+</div>
+</body>
+
+
+</html>
